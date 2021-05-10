@@ -192,7 +192,7 @@ def main(args):
     print '\n'
     with open(OUTPUT_SCRIPT_PATH, 'wb') as output_script:
         output_script.write(dvd_official_converter.generate_script())
-        print 'Written {output_scrip_path}.'.format(output_script_path=OUTPUT_SCRIPT_PATH)
+        print 'Written {output_script_path}.'.format(output_script_path=OUTPUT_SCRIPT_PATH)
 
 
 if __name__=='__main__':
