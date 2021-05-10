@@ -169,6 +169,9 @@ class DvdOfficialConverter(object):
 
     def generate_script(self):
         script = '#!/usr/bin/env bash\n'
+        script += '{tool} "{path}"'.format(tool=MKDIR_COMMAND, path=self._output_path)
+        script += '\n'
+
         for season in self._output_seasons_dirs:
             season_name = 'Season {season}'.format(season=season)
             script += '{tool} "{path}"'.format(tool=MKDIR_COMMAND, path=os.path.join(self._output_path, season_name))
